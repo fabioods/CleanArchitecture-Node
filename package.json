@@ -19,11 +19,13 @@
     "typescript": "^4.2.4"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest",
+    "lint": "eslint src/** --fix"
   },
   "lint-staged": {
     "**/*.ts": [
-      "eslint src/ --fix"
+      "eslint \"src/**\" --fix"
     ]
 
   }
