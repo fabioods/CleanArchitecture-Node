@@ -25,11 +25,13 @@
   "scripts": {
     "prepare": "husky install",
     "test": "jest",
-    "lint": "eslint src/** --fix"
+    "lint": "eslint src/** --fix",
+    "test:staged": "jest"
   },
   "lint-staged": {
     "**/*.ts": [
-      "eslint \"src/**\" --fix"
+      "eslint \"src/**\" --fix",
+      "yarn test:staged"
     ]
   }
 }
