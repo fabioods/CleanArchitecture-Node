@@ -28,7 +28,7 @@
     "test": "jest --passWithNoTests --runInBand",
     "test:watch": "jest --passWithNoTests --watch --runInBand",
     "lint": "eslint src/** --fix",
-    "test:staged": "jest --passWithNoTests"
+    "test:staged": "jest --passWithNoTests --runInBand"
   },
   "lint-staged": {
     "**/*.ts": [

@@ -19,7 +19,8 @@
     ],
     "rules": {
       "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
-      "class-methods-use-this": "off"
+      "class-methods-use-this": "off",
+      "import/prefer-default-export": "off"
     },
     "settings": {
       "import/parsers": {
