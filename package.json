@@ -27,7 +27,7 @@
     "prepare": "husky install",
     "test": "jest",
     "lint": "eslint src/** --fix",
-    "test:staged": "jest"
+    "test:staged": "jest --passWithNoTests"
   },
   "lint-staged": {
     "**/*.ts": [
