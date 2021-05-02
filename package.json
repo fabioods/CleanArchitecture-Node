@@ -25,7 +25,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "jest --passWithNoTests --watch",
+    "test": "jest --passWithNoTests --runInBand",
+    "test:watch": "jest --passWithNoTests --watch --runInBand",
     "lint": "eslint src/** --fix",
     "test:staged": "jest --passWithNoTests"
   },
