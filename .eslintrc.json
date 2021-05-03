@@ -21,7 +21,8 @@
       "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
       "class-methods-use-this": "off",
       "import/prefer-default-export": "off",
-      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "max-classes-per-file" : ["error", 2]
     },
     "settings": {
       "import/parsers": {
