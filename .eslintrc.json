@@ -22,7 +22,7 @@
       "class-methods-use-this": "off",
       "import/prefer-default-export": "off",
       "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-      "max-classes-per-file" : ["error", 2]
+      "max-classes-per-file" : "off"
     },
     "settings": {
       "import/parsers": {
