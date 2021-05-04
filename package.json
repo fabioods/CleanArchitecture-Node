@@ -1,8 +1,18 @@
 {
   "name": "CLEAN-NODE-API",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
+  "homepage": "https://github.com/fabioods/CleanArchitecture-Node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabioods/CleanArchitecture-Node"
+  },
+  "engines": {
+    "npm": ">=7.11.2",
+    "node": ">=16.0.0",
+    "yarn": ">= 1.22.10"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/node": "^15.0.1",
