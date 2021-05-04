@@ -1,3 +1,5 @@
-export * from './Controller'
-export * from './EmailValidator'
-export * from './http'
+import { Controller } from './Controller'
+import { EmailValidator } from './EmailValidator'
+import { HttpRequest, HttpResponse } from './http'
+
+export { Controller, EmailValidator, HttpRequest, HttpResponse }
