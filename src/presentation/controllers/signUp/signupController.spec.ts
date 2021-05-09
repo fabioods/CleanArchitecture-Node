@@ -4,6 +4,7 @@ import { EmailValidator, AddAccount, AddAccountModel, AccountModel } from './sig
 
 const makeAddAccount = (): AddAccount => {
   class AddAccountStub implements AddAccount {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     add(account: AddAccountModel): AccountModel {
       const fakeAccount = {
         id: 'valid_id',
@@ -19,6 +20,7 @@ const makeAddAccount = (): AddAccount => {
 
 const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     isValid(email: string): boolean {
       return true
     }
@@ -217,7 +219,7 @@ describe('SignUp Controller', () => {
   })
 
   it('should be able to return 200 valid data was provided', () => {
-    const { signUpController, addAccount } = makeSut()
+    const { signUpController } = makeSut()
     const httpRequest = {
       body: {
         email: 'valid_email@mail.com',
