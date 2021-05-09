@@ -35,10 +35,12 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "test": "jest --passWithNoTests --runInBand",
-    "test:watch": "jest --passWithNoTests --watchAll --runInBand",
     "lint": "eslint src/** --fix",
-    "test:staged": "jest --passWithNoTests --runInBand"
+    "test": "jest --runInBand",
+    "test:unit": "yarn test --passWithNoTests --watch -c jest-unit-config.ts",
+    "test:integration": "yarn test --passWithNoTests --runInBand --watch -c jest-integration-config.ts",
+    "test:staged": "yarn test --passWithNoTests --runInBand --silent --noStackTrace",
+    "test:ci": "yarn test"
   },
   "lint-staged": {
     "**/*.ts": [
