@@ -140,6 +140,21 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new ServerError())
   })
 
+  it('should be able to return 400 if passwordConfirmation fails', () => {
+    const { signUpController } = makeSut()
+    const httpRequest = {
+      body: {
+        name: 'Fábio',
+        email: 'any@email.com',
+        password: 'any_password',
+        passwordConfirmation: 'invalid_password',
+      },
+    }
+    const httpResponse = signUpController.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new InvalidParamError('passwordConfirmation'))
+  })
+
   it('should be able to return 200 if all fields was provided', () => {
     const { signUpController } = makeSut()
     const httpRequest = {
