@@ -6,14 +6,18 @@ interface MakeSut {
   dbAccount: DbAddAccount
 }
 
-const makeSut = (): MakeSut => {
+const makeEncrypter = (): Encrypter => {
   class EncrypterStub implements Encrypter {
     async encrypt(value: string): Promise<string> {
       return 'hashedValue'
     }
   }
 
-  const encrypter = new EncrypterStub()
+  return new EncrypterStub()
+}
+
+const makeSut = (): MakeSut => {
+  const encrypter = makeEncrypter()
   const dbAccount = new DbAddAccount(encrypter)
   return { encrypter, dbAccount }
 }
