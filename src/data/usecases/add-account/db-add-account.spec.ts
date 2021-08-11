@@ -94,4 +94,21 @@ describe('DB Add Account', () => {
 
     await expect(savedData).rejects.toThrow()
   })
+
+  it('should return an account on success', async () => {
+    const { dbAccount } = makeSut()
+    const accountData = {
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'valid_password',
+    }
+    const account = await dbAccount.add(accountData)
+
+    expect(account).toEqual({
+      id: 'valid_id',
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'hashedValue',
+    })
+  })
 })
