@@ -11,4 +11,9 @@ export const MongoHelper = {
   getCollection(name: string): Collection {
     return this.client.db().collection(name)
   },
+  async map<T>(collection: any, collectionName: string): Promise<T> {
+    const dataCollection = await MongoHelper.getCollection(collectionName).findOne(collection.insertedId, {})
+    const dataModel = { ...dataCollection, id: collection.insertedId.toString() } as unknown as T
+    return dataModel
+  },
 }
