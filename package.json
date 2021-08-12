@@ -16,6 +16,7 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^2.0.1",
     "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
     "@types/jest": "^26.0.23",
     "@types/mongodb": "^4.0.7",
     "@types/node": "^15.0.3",
@@ -39,10 +40,12 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
     "mongodb": "^4.1.0",
     "validator": "^13.6.0"
   },
   "scripts": {
+    "start": "tsnd --transpile-only --ignore-watch node_modules ./src/main/server.ts",
     "prepare": "husky install",
     "lint": "eslint src/** --fix",
     "test": "jest --runInBand",
